@@ -1,0 +1,81 @@
+html,body{
+	height: 99%;
+	width: 99%;
+}
+
+*{
+	margin:0;
+  padding: 0;
+  box-sizing:border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background:#9a9898;
+}
+
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: #c4bfbf;
+}
+.navbar a {
+	font-size: 18px;
+  color:white;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active{
+  color:#9095ad;
+  
+}
+
+/* 
+right div
+border
+background
+font size
+width 48%
+min height 300
+position absolute
+right 5px
+
+*move the iframe inside the div in htm;
+
+*/
+
+iframe{
+  margin:1px;
+  padding:3px;
+}
+
+.home{
+  display:flex;
+  align-items:center;
+  height: 90vh;
+  padding: 0 10%
+}
+
+.projects{
+  display:flex;
+  align-items:center;
+  height: 90vh;
+  padding: 0 10%
+}
+
+
+/* */ 
+
+
+
+
+
+
+

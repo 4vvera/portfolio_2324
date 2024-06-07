@@ -1,0 +1,88 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Makea Beat</title>
+  <link href="project.css" rel="stylesheet" type="text/css" />
+  <link href="../icons/favicon.ico" rel="icon" type="image/png">
+</head>
+<body>
+  <div class="gradientCont">
+    <a href="../showcase/showcase.html"><button>back</button></a>
+    <div class="mainCont">
+    <h2>Make a Beat!</h2>
+    <h3>"Build a Beat" challenge and learn to create your own music in the Python programming language.  </h3> 
+    <div class="terminalContR">
+    <div id="terminalReslutsCont">
+    </div>
+    <form>
+    <p>      <br>
+      from earsketch import *      <br>
+      from random import *      <br>
+
+      setTempo(120)      <br>
+      init()      <br>
+      <br>
+      #------------------------------------------------------      <br>
+      <br>
+      #variables      <br>
+      <br>
+      beat = "0+++0+++0-000+00"      <br>
+      fillDrum = RD_TRAP_RAWLEAD_5      <br>
+      <br>
+      #beginning
+      <br>
+      fitMedia(RD_TRAP_RAWLEAD_4, 1, 1, 5) # the introduction to the song      <br>
+      <br>
+      #recorded sounds      <br>
+      fitMedia(AVVERA_PARTY, 6, 4, 5)       <br>
+      <br>
+      <br>
+      #effects      <br>
+      <br>
+      setEffect(1, VOLUME, GAIN, 0, 4, -60, 5) #makes sure the introduction song is heard.      <br>
+      setEffect(1, VOLUME, GAIN, -60, 5, 0, 6) #adds a smooth transition to the two different sections.       <br>
+      <br>
+      #beat      <br>
+      <br>
+      for measure in range(11, 13, 1): #creates a beat      <br>
+          makeBeat(fillDrum, 7, measure, beat)      <br>
+      <br>
+      #middle      <br>
+      <br>
+      fitMedia(RD_TRAP_MAIN808_BEAT_12, 7, 12, 13)      <br>
+      fitMedia(RD_EDM_DRUMROLL_BREAK_7, 5, 11, 13)      <br>
+      fitMedia(YG_WEST_COAST_HIP_HOP_BASS_4, 4, 11, 13)       <br>
+      <br>
+      #functions      <br>
+      <br>
+      def main(start,end) : #create a function so this could be called any any time      <br>
+          fitMedia(RD_TRAP_RAWLEAD_5, 1, start, end) #keeps the intense mood.      <br>
+          fitMedia(RD_TRAP_DRUM_PART_27, 3, start, end) #the drums improves the rhytmn of the song       <br>
+          fitMedia(RD_TRAP_BASSDROPS_1, 2, start, end) #adds intrest to the song and enhances the musical situation      <br>
+      <br>
+      def measure(startMeasure, endMeasure): #adds depth to the music      <br>
+          fitMedia(CIARA_SET_BASSLINE_1, 4, startMeasure, endMeasure)      <br>
+      <br>
+      <br>
+      #callings       <br>
+      <br>
+      main(5,11)      <br>
+      measure(7, 11)      <br>
+      main(13,20)      <br>
+      <br>
+      <br>
+      listen to the ringtone!
+      <br>
+      <br>
+      <audio controls>
+         <source src="../etc/beat.mp3" type="audio/mp3">
+       </audio>
+    </p>
+    </form>
+    </div>
+    </div>
+  </div>
+</body>
+</html>

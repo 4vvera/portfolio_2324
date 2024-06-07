@@ -1,0 +1,93 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Deisgn a ringtone</title>
+  <link href="project.css" rel="stylesheet" type="text/css" />
+  <link href="../icons/favicon.ico" rel="icon" type="image/png">
+</head>
+<body>
+  <div class="gradientCont">
+    <a href="../showcase/showcase.html"><button>back</button></a>
+    <div class="mainCont">
+    <h2>Design A Ringtone</h2>
+    <h3> Code a ringtone in EarSketch!</h3>
+    <div class="terminalContR">
+    <div id="terminalReslutsCont">
+    </div>
+    <form>
+    <p>
+      from earsketch import * #import all items <br>
+      init() #prepares the DAW(digital audio workstation) to accept and display music <br>
+      setTempo(130) # how fast the song is going to go<br>
+      <br>
+      d = AK_UNDOG_PERC_DRUMS<br>
+      t = ENTREP_THEME_OUTRO_TRUMPET<br>
+      p = DKBEAR_FREE_BEAT_FULL<br>
+      b = COMMON_LOVE_DRUMBEAT_1<br>
+      extra = HIPHOP_BASSSUB_002<br>
+      theme = BOYKINZ_NIGHT_THEME_BASS_1<br>
+      <br>
+      def part1(beg, last):<br>
+          fitMedia(p, 3, beg, last)<br>
+          fitMedia(b,4,beg*2,last*3.6)<br>
+          #fitMedia(clap,3,beg,last/2)<br>
+          #for bar in range(beg,last):<br>
+              #make a beat ( sound track,start,beat)<br>
+              #makeBeat(clap, 4, bar , clapBeat)<br>
+      part1(1,5)<br>
+      <br>
+      def part2(x,y):<br>
+          fitMedia(t, 2, x, y)<br>
+          fitMedia(theme, 1, x*0.6, y*1.125)<br>
+          fitMedia(d, 1, x*2.25, y*1.8)<br>
+      part2(7,19)<br>
+      <br>
+      clapBeat = "--0-------0--" # 0 is for the pause<br>
+      <br>
+      def part2con(a,b):<br>
+          fitMedia(ELECTRO_DRUM_MAIN_PART_014, 5, a, b*1.2)<br>
+          for track in range(1,4):<br>
+          #set effect (track,type,parameter , value)<br>
+              setEffect(1, COMPRESSOR, COMPRESSOR_THRESHOLD, -30)<br>
+              setEffect(1, COMPRESSOR, COMPRESSOR_RATIO, 100)<br>
+          for bar in range(a,b):<br>
+              #make a beat (sound track,start,beat)<br>
+              makeBeat(extra, 6, bar , clapBeat)<br>
+      <br>
+      <br>
+      part2con(13,19) <br>
+      <br>
+      def extra(g,h):<br>
+          fitMedia(TFLAMES_OMEN_BASS_VRS, 7, g, h)<br>
+      extra(19,30)<br>
+      <br>
+      <br>  
+      #fitMedia(d, 1, 9, 15)<br>
+      #fitMedia(t, 2, 4, 8)<br>
+      #fitMedia(p, 3, 1, 5)<br>
+      #fitMedia(b, 4, 1, 18)<br>
+      #fitMedia(extra, 5, 13, 18)<br>
+      #fitMedia(theme, 1, 4, 9)<br>
+      <br>
+      for track in range(1,4):<br>
+          #set effect (track,type,parameter , value)<br>
+          setEffect(2,VOLUME,GAIN,-40,1,0,5)<br>
+      <br>
+      finish();<br>
+      <br>
+      <br>
+      listen to the ringtone!
+      <br>
+      <br>
+      <audio controls>
+         <source src="../etc/ringetone.mp3" type="audio/mp3">
+       </audio>
+    </p>
+    </form>
+    </div>
+    </div>
+  </div>
+</body>
+</html>
